@@ -33,16 +33,17 @@ net.createServer((socket) => {
                 console.log(`Blackjack`)
                 return
             }
-            if(msg == 'start' && player != null){
-                if(player['start'] = 'start'){
-                    console.log(`${player.name}(${player.addr}:${player.port}) is Start.`)
-                    console.log('Player Ready')
-                    gameState = 1
+        }
 
-                    announce('Game start')
-                }
-                return
+        if (msg == 'start' && player != null) {
+            if (player['start'] = 'start') {
+                console.log(`${player.name}(${player.addr}:${player.port}) is Start.`)
+                console.log('Player Ready')
+                gameState = 1
+
+                announce('Game start')
             }
+            return
         }
 
         if(gameState == 1){
